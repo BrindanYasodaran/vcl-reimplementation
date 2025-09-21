@@ -73,7 +73,6 @@ if __name__ == "__main__":
 
     assert original_label == permuted_label_1
     assert not torch.equal(permuted_img_1, original_img)
-    permuted_img_1 != original_img
 
 
 
