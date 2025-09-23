@@ -1,0 +1,70 @@
+_wandb:
+    value:
+        cli_version: 0.22.0
+        e:
+            9h778nx3w17hz9o9ns4l76lorfjqeut7:
+                args:
+                    - --data_path
+                    - ./data
+                    - --model_path
+                    - ./models/pretrained_mlp.pth
+                    - --wandb_project
+                    - mnist-mlp-pretraining
+                cpu_count: 36
+                cpu_count_logical: 72
+                cudaVersion: "12.2"
+                disk:
+                    /:
+                        total: "26843545600"
+                        used: "12670410752"
+                email: byasodaran@gmail.com
+                executable: /workspace/vcl-reimplementation/.venv/bin/python
+                git:
+                    commit: f8a1dae9bc0cc485ae125fb798b78fe5ba35c0f7
+                    remote: https://github.com/BrindanYasodaran/vcl-reimplementation.git
+                gpu: NVIDIA GeForce RTX 3060
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 3584
+                      memoryTotal: "12884901888"
+                      name: NVIDIA GeForce RTX 3060
+                      uuid: GPU-03c0568b-ed75-8ef2-e505-f2a964ca26f1
+                host: 669f4f7cf982
+                memory:
+                    total: "405627699200"
+                os: Linux-5.4.0-169-generic-x86_64-with-glibc2.35
+                program: -m scripts.pretrain_mle
+                python: CPython 3.10.18
+                root: /workspace/vcl-reimplementation
+                startedAt: "2025-09-23T15:26:28.467607Z"
+                writerId: 9h778nx3w17hz9o9ns4l76lorfjqeut7
+        m: []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 1
+                - 41
+            "2":
+                - 1
+                - 41
+            "3":
+                - 1
+                - 16
+                - 61
+            "4": 3.10.18
+            "5": 0.22.0
+            "12": 0.22.0
+            "13": linux-x86_64
+batch_size:
+    value: 128
+data_path:
+    value: ./data
+epochs:
+    value: 100
+lr:
+    value: 0.001
+model_path:
+    value: ./models/pretrained_mlp.pth
+wandb_project:
+    value: mnist-mlp-pretraining

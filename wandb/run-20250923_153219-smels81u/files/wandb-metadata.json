@@ -1,0 +1,48 @@
+{
+  "os":  "Linux-5.4.0-169-generic-x86_64-with-glibc2.35",
+  "python":  "CPython 3.10.18",
+  "startedAt":  "2025-09-23T15:32:19.871092Z",
+  "args":  [
+    "--data_path",
+    "./data",
+    "--model_path",
+    "./models/pretrained_mlp.pth",
+    "--wandb_project",
+    "mnist-mlp-pretraining_2",
+    "--epochs",
+    "10"
+  ],
+  "program":  "-m scripts.pretrain_mle",
+  "git":  {
+    "remote":  "https://github.com/BrindanYasodaran/vcl-reimplementation.git",
+    "commit":  "f8a1dae9bc0cc485ae125fb798b78fe5ba35c0f7"
+  },
+  "email":  "byasodaran@gmail.com",
+  "root":  "/workspace/vcl-reimplementation",
+  "host":  "669f4f7cf982",
+  "executable":  "/workspace/vcl-reimplementation/.venv/bin/python",
+  "cpu_count":  36,
+  "cpu_count_logical":  72,
+  "gpu":  "NVIDIA GeForce RTX 3060",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "26843545600",
+      "used":  "12674637824"
+    }
+  },
+  "memory":  {
+    "total":  "405627699200"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 3060",
+      "memoryTotal":  "12884901888",
+      "cudaCores":  3584,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-03c0568b-ed75-8ef2-e505-f2a964ca26f1"
+    }
+  ],
+  "cudaVersion":  "12.2",
+  "writerId":  "mc74u3xhpfr5rd2u0j0sp8tluoht7egp"
+}
