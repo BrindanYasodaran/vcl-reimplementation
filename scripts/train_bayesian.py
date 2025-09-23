@@ -46,6 +46,8 @@ class MLPTrainer:
         self.training_data = load_datasets(base_training_data, self.args.seed, self.args.num_tasks, self.args.data_path)
         self.test_data = load_datasets(base_test_data, self.args.seed, self.args.num_tasks, self.args.data_path)
 
+        self.num_train_data = len(self.training_data[0])
+
         self.train_loaders = [DataLoader(training_data, batch_size=self.args.batch_size, shuffle=True) for training_data in self.training_data]
         self.test_loaders = [DataLoader(test_data, batch_size=self.args.batch_size, shuffle=False) for test_data in self.test_data]
 
@@ -75,7 +77,10 @@ class MLPTrainer:
         logits, kl_loss = self.model(images)
         
         nll_loss = self.loss_fn(logits, labels)
-        loss = nll_loss + kl_loss
+
+        pi_weight = self.num_train_data / self.args.batch_size
+
+        loss = (pi_weight * nll_loss) + kl_loss
         loss.backward()
 
         self.optimiser.step()
@@ -127,7 +132,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_path", type=str)
     parser.add_argument("--model_path", type=str)
-    parser.add_argument("--epochs", type=int, default=100)
+    parser.add_argument("--epochs", type=int, default=10)
     parser.add_argument("--lr", type=float, default=0.001)
     parser.add_argument("--batch_size", type=int, default=128)
     parser.add_argument("--wandb_project", type=str)
@@ -144,12 +149,5 @@ if __name__ == "__main__":
 
     #save model 
     torch.save(trainer.model.state_dict(), model_path)
-
-
-
-
-
-
-
 
 

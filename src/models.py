@@ -1,4 +1,4 @@
-from vcl import BayesianLinear
+from .vcl import BayesianLinear
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn import Parameter

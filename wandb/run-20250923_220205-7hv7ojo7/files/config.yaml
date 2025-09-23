@@ -1,0 +1,83 @@
+_wandb:
+    value:
+        cli_version: 0.22.0
+        e:
+            y866k303zg11bd9wx71u3ck8w3sf5rzh:
+                args:
+                    - --data_path
+                    - ./data
+                    - --model_path
+                    - ./models/bayesian_mlp.pth
+                    - --mle_weights_path
+                    - ./models/pretrained_mlp.pth
+                    - --wandb_project
+                    - bayesian-mnist
+                    - --num_tasks
+                    - "10"
+                    - --seed
+                    - "42"
+                cpu_count: 36
+                cpu_count_logical: 72
+                cudaVersion: "12.2"
+                disk:
+                    /:
+                        total: "26843545600"
+                        used: "12716974080"
+                email: byasodaran@gmail.com
+                executable: /workspace/vcl-reimplementation/.venv/bin/python
+                git:
+                    commit: 317bf58e46c38da4b61b85b7f1407a305947d950
+                    remote: https://github.com/BrindanYasodaran/vcl-reimplementation.git
+                gpu: NVIDIA GeForce RTX 3060
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 3584
+                      memoryTotal: "12884901888"
+                      name: NVIDIA GeForce RTX 3060
+                      uuid: GPU-03c0568b-ed75-8ef2-e505-f2a964ca26f1
+                host: 669f4f7cf982
+                memory:
+                    total: "405627699200"
+                os: Linux-5.4.0-169-generic-x86_64-with-glibc2.35
+                program: -m scripts.train_bayesian
+                python: CPython 3.10.18
+                root: /workspace/vcl-reimplementation
+                startedAt: "2025-09-23T22:02:05.647108Z"
+                writerId: y866k303zg11bd9wx71u3ck8w3sf5rzh
+        m: []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 1
+                - 41
+            "2":
+                - 1
+                - 41
+            "3":
+                - 1
+                - 2
+                - 16
+                - 61
+            "4": 3.10.18
+            "5": 0.22.0
+            "12": 0.22.0
+            "13": linux-x86_64
+batch_size:
+    value: 128
+data_path:
+    value: ./data
+epochs:
+    value: 10
+lr:
+    value: 0.001
+mle_weights_path:
+    value: ./models/pretrained_mlp.pth
+model_path:
+    value: ./models/bayesian_mlp.pth
+num_tasks:
+    value: 10
+seed:
+    value: 42
+wandb_project:
+    value: bayesian-mnist
