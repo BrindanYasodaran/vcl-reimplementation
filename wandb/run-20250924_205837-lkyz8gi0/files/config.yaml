@@ -1,0 +1,82 @@
+_wandb:
+    value:
+        cli_version: 0.22.0
+        e:
+            9lg148j5xm6atez14esmjs3aa92hku2s:
+                args:
+                    - --data_path
+                    - ./data
+                    - --model_path
+                    - ./models/bayesian_mlp_all_tasks_coreset
+                    - --wandb_project
+                    - bayesian-mnist-all-tasks_try_4
+                    - --mle_weights_path
+                    - ./models/pretrained_mlp.pth
+                cpu_count: 32
+                cpu_count_logical: 64
+                cudaVersion: "12.5"
+                disk:
+                    /:
+                        total: "26843545600"
+                        used: "11007787008"
+                email: byasodaran@gmail.com
+                executable: /workspace/vcl-reimplementation/.venv/bin/python
+                git:
+                    commit: 913a3512f618af39a1a2398062e365a5a4bda3f5
+                    remote: https://github.com/BrindanYasodaran/vcl-reimplementation.git
+                gpu: NVIDIA GeForce RTX 3060
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 3584
+                      memoryTotal: "12884901888"
+                      name: NVIDIA GeForce RTX 3060
+                      uuid: GPU-60f22338-c8fd-a8b9-7e2f-ee1e2254bd0e
+                host: 6c4ea20d613f
+                memory:
+                    total: "134999240704"
+                os: Linux-5.4.0-216-generic-x86_64-with-glibc2.35
+                program: -m scripts.train_bayesian_all_tasks_coreset
+                python: CPython 3.10.18
+                root: /workspace/vcl-reimplementation
+                startedAt: "2025-09-24T20:58:37.346786Z"
+                writerId: 9lg148j5xm6atez14esmjs3aa92hku2s
+        m: []
+        python_version: 3.10.18
+        t:
+            "1":
+                - 1
+                - 41
+            "2":
+                - 1
+                - 41
+            "3":
+                - 1
+                - 16
+                - 61
+            "4": 3.10.18
+            "5": 0.22.0
+            "12": 0.22.0
+            "13": linux-x86_64
+batch_size:
+    value: 128
+coreset_epochs:
+    value: 5
+coreset_size:
+    value: 200
+data_path:
+    value: ./data
+epochs:
+    value: 10
+lr:
+    value: 0.001
+mle_weights_path:
+    value: ./models/pretrained_mlp.pth
+model_path:
+    value: ./models/bayesian_mlp_all_tasks_coreset
+num_tasks:
+    value: 10
+seed:
+    value: 42
+wandb_project:
+    value: bayesian-mnist-all-tasks_try_4
